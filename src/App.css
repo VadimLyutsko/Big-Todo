@@ -7,31 +7,18 @@
   margin-right: 50px;
 }
 
-.task-completed {
-  opacity: 0.5;
-}
-
-.task {
-  font-weight: bold;
-}
-.filter-header {
-  display: inline-block;
-  padding: 5px;
-  border-radius: 50%;
-  margin-left: 20px;
-  font-size: 12px;
-  background-color: cadetblue;
-  color: white;
-  min-width: 30px;
-  text-align: center;
-}
-
-.button-active {
-  background-color: cadetblue;
-  color: white;
-}
-
 .error {
-  outline: none;
-  border: 2px solid red;
+  border: red 1px solid;
+}
+
+.error-message {
+  color: red;
+}
+
+.active-filter {
+  background-color: aquamarine;
+}
+
+.is-done {
+  opacity: 0.5;
 }
