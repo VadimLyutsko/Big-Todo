@@ -1,4 +1,6 @@
 import React, {ChangeEvent, FC, KeyboardEvent, useState} from 'react';
+import {Button, TextField} from "@material-ui/core";
+import SaveAltIcon from '@material-ui/icons/SaveAlt';
 
 type AddItemFormPropsType = {
     addItem: (newTitle: string) => void
@@ -27,13 +29,32 @@ const AddItemForm: FC<AddItemFormPropsType> = (props) => {
     }
     return (
         <div>
-            <input value={title}
-                   onChange={onChangeHandler}
-                   onKeyPress={onKeyPressHandler}
-                   className={error ? "error" : ""}
+            <TextField
+                variant={"outlined"}
+                size={"small"}
+                label={"Touch me :)"}
+                value={title}
+                onChange={onChangeHandler}
+                onKeyPress={onKeyPressHandler}
+                error={!!error}
+                helperText={error}
             />
-            <button onClick={addItem}>+</button>
-            {error && <div className="error-message">{error}</div>}
+
+
+            {/*<input value={title}*/}
+            {/*       onChange={onChangeHandler}*/}
+            {/*       onKeyPress={onKeyPressHandler}*/}
+            {/*       className={error ? "error" : ""}*/}
+            {/*/>*/}
+            <Button>
+
+                <SaveAltIcon
+                    fontSize={"large"}
+                    onClick={addItem}
+                />
+            </Button>
+
+
         </div>
     );
 };
