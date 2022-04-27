@@ -12,6 +12,7 @@ const AddItemForm: FC<AddItemFormPropsType> = (props) => {
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setTitle(e.currentTarget.value)
     }
+
     const addItem = () => {
         const newTitle = title.trim();
         if (newTitle !== "") {
